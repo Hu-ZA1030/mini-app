@@ -1,0 +1,15 @@
+<view>
+  <!--数据绑定  -->
+  <view>{{msg}}</view>
+  <button bindtap="change">改变</button>
+  <!-- 列表循环 -->
+  <view wx:for="{{list}}" wx:key="*this">
+      <text>{{item.id}}</text>
+      <text>-</text>
+      <text>{{item.name}}</text>
+  </view>
+  <!-- 条件渲染 -->
+  <view wx:if="{{flag}}">从此长安无故里</view>
+  <view wx:if="{{backgroud =='side'}}">林深时见鹿，海蓝时见鲸</view>
+  <view wx:elif="{{backgroud =='hide'}}">林深时雾起，海蓝时浪涌</view>
+</view>
